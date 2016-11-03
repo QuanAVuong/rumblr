@@ -84,7 +84,8 @@
 			var body = this.state.input;
 	
 			_jquery2.default.ajax({
-				url: "/posts", // name of the 'package'
+				// tells server.js name of the 'package' to go to => app.use("/posts") in server.js will be called
+				url: "/posts",
 				type: "POST", // type of data
 				data: { post: body } // content of data packaged into the request: sift through huge HTTP request file get only the data portion out
 			});
